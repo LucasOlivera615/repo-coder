@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de prueba para practicar</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Fuente de google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Esto representa el título de la página, estoy practicando, por eso no contiene información tan relevante-->
+    <h1> Titulo de la página </h1>
+    <!-- Al igual que con el título, más práctica-->
+    <p> Parrafo para prácticar para la página</p>
+    
+    <a href=""></a>
+    <img src="" alt="">
+
+    <ol>
+        <!-- Acá cree una lista ordenada, por eso el "ol"-->
+        <li>Escribir el código</li>
+        <li>Promocionar el resultado</li>
+        <span><li>Generar dinero</li></span>
+    </ol>
+
+    <ul>
+        <!-- y acá cree una lista sin orden, la que tiene los puntos, por eso el "ul"-->
+        <li>No seguir los pasos</li>
+        <li>Luego no se que poner, pero no tiene orden</li>
+        <li>Esto tampoco tiene orden</li>
+    </ul>
+
+<!--TIPOS DE ENLACES-->
+    
+    <!--Enlace absoluto-->
+    <a href="https://youtube.com" target="_blank">Puedes escuchar un poco de música aquí</a><br>
+    
+    <!--Enlaces relativos-->
+    <a href="coderhouse.html">Ir a otra página para ver que hay</a>
+
+    <!--Enlaces Internos | El ID es unico y se crea con el simbolo #, el enlace interno te dirige hasta una sección de la misma página-->
+    <a href="#iraca">Ir para ese lugar</a>
+    
+    <Section id="iraca">
+        <p class="indicacion">Acá es el lugar</p>
+    </Section>
+
+    <!--Inserción de videos-->
+
+    <video src="video.mp4" controls>Video</video>
+
+    <!--Inserción de audio-->
+
+    <audio src="audio.mp3" controls>audio</audio>
+
+    <!-- El "target= "blank"" permite que el enlace se abra en una nueva pestaña, sin cerrar nuestra pestaña actual.-->
+
+    <a href="https://Google.com"target="_blank">Google</a>
+
+    <!-- Tablas| Sirve para organizarnos o armar estructuras de emails-->
+
+    <table> <!--Etiqueta contenedora de la tabla-->
+            <tr> <!-- Definen una fila, o las filas de nuestra tabla, como si fueran renglones-->
+                <th></th> <!--Esto representa los encabezados de una tabla-->
+                <td></td> <!--Esto representa las celdas de una tabla (td es muy importante)-->
+            </tr>
+    </table>
+
+    <!--Ejemplo de tabla-->
+
+    <table>
+        <tr>
+            <th>Profesor</th>
+            <th>Días</th>
+            <th>Horarios</th>
+        </tr>
+        <tr>
+            <td>Manuel Olivera</td>
+            <td>Lunes</td>
+            <td>8:00 - 10:00</td>
+        </tr>
+        <tr>
+            <td>Manuel Olivera</td>
+            <td>Martes</td>
+            <td>8:00 - 10:00</td>
+        </tr>
+        <tr>
+            <td>Manuel Olivera</td>
+            <td>Miercoles</td>
+            <td>8:00 - 10:00</td>
+        </tr>
+        <tr>
+            <td>Manuel Olivera</td>
+            <td>Jueves</td>
+            <td>8:00 - 10:00</td>
+        </tr>
+        <tr>
+            <td>Manuel Olivera</td>
+            <td>Viernes</td>
+            <td>8:00 - 10:00</td>
+        </tr>
+    </table>
+
+    <!--Formularios-->
+
+    <form action="/submit"method="post"> <!--Etiqueta contenedora del formulario, dentro de esta etiqueta ira nuestro formulario completo, importante agregarle los atributos "action" y "method" para que funcione, en action definimos la URL a donde se envía el formulario y en method definimos el metodo de envío, como vamos a hacer para enviar la información a la direccion que pusimos en action -->
+        <label for="nombre">Nombre</label> <!--El label es el nombre que le vamos a dar a la seccion del formulario, la etiqueta, aquí le damos información al usuario-->
+        <input type="text" name="nombre" id="nombre"> <!--El input es donde le pedimos información al usuario, es de tipo texto, y en la seccion "Name", colocamos nombre para identificar la informacion que le estamos pidiendo al usuario, para no olvidarla, el id va directamente relacionado al label, es para "Enganchar" el input con el label, entonces, el label es "for"(para) "nombre", y la informacion que nos van a dar es para ese mismo label, para el nombre, entonces el ID del input es "nombre"-->
+
+        <label for="email">Direccion de correo electrónico</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password">
+
+        <label for="mensaje">Comentario o mensaje</label>
+        <textarea name="mensaje" id="mensaje"></textarea> <!--textarea permite al usuario escribir un mensaje largo por si quiere dejar algun comentario-->
+
+        <label for="genero">Sexo:</label>
+
+        <label for="">Hombre</label>
+        <input type="radio" name="" id="">
+
+        <label for="">Mujer</label>
+        <input type="radio" name="" id="">
+
+        <label for="">Prefiero no decirlo</label>
+        <input type="radio" name="" id="">
+
+        <label for="suscribirse">Suscribirse</label>
+        <input type="checkbox" name="" id="">
+
+        <label for="horario">Elegir horario</label>
+        <select name="" id=""> <!--select nos permite crear un desplegable con opciones para que el usuario elija una de esas opciones-->
+            <option value="">Selecciona un horario</option> <!--con option creo la opción para que el usuario elija-->
+            <option value="">8:00 - 10:00</option>
+            <option value="">10:00 - 12:00</option>
+            <option value=""> 16:00 - 18:00</option>
+            <option value="">18:00 - 20:00</option>
+        </select>
+        
+        <input type="submit" value="Enviar"> <!--Para enviar los datos al servidor-->
+
+    </form>
+
+</body>
+</html>

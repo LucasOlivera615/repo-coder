@@ -1,0 +1,163 @@
+/* Reset de CSS, sirve para resetear los valores que vienen por default en html cuando vas a hacer una página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*Selector + Propiedad + Valor 
+
+Selector{
+Propiedad: Valor            El "selector" representa una etiqueta del archivo html, la "Propiedad" representa el cambio que se le va a hacer (ejemplo, color), y el "Valor" representa la característica del cambio (ejemplo, azul), un selector puede tener varias propiedades
+}
+
+*/
+
+p{
+    color: rgb(30, 144, 255, 1); /*Nombre del color, Hexadecimal, RGB y RGBA*/
+    font-size: 30px; /*Font-size y los tamaños en general se expresan en distintas unidades de medida, para algunas cosas utilizamos pixeles (px), para otras em, para otras rem, y para otras encontramos %, lo que tiene que ver con textos, en general se encuentra con "px" y lo que tiene que ver con ancho y alto, se suele encontrar con %*/
+    margin: 20px;
+    text-align: center;
+}
+
+h1{
+    color: rgb(30, 144, 255, 1);
+    text-align: center;
+}
+
+/*section p {
+    color: rgb(184, 6, 6); /*Si bien todos los elementos p tienen como caracteristica color, fontsize, margin y text-align, a el p que está dentro del section (que es hijo del section), le di la orden de ser de color rojo
+    font-style: italic;
+}*/
+
+a{
+    color: rgb(0, 0, 0);
+}
+
+li{
+    color: rgb(0, 0, 0);
+}
+
+ol span li {
+    color: rgb(11, 197, 5);
+}
+
+table{
+    color: rgb(203, 206, 209);
+}
+
+form{
+    color:rgb(203, 206, 209);
+}
+
+video{
+    border-color: rgba(30, 144, 255, 1);
+    border-style: groove;
+}
+
+/* Existen tres formas de utilizar css para aplicar estilos a la página o al sitio:
+
+1- La primera forma, es utilziar una "vinculación externa" utilizando "<link rel="stylesheet" href="styles.css(o el nombre de archivo que tengas)">" dentro del "head", esto se trata de crear un archivo CSS externo para aplicar estilos al resto de archivos html, la ventaja de esto es que tenes un codigo html mucho más limpio, lo cual genera que sea más facil de leer todo y más facil de mantener al igual que el codigo de css, y en caso de querer aplicar cambios al codigo de css, lo podes hacer sin mucho problema y esos cambios se aplicaran a todas las paginas que contengan ese archivo de estilos de css, ademas de que ese codigo de css es reutilizable en varias páginas, lo malo, es que requiere un numero adicional (una mas) de solicitudes http, lo que quiere decir que puede hacer que la página cargue un poco más lento
+
+2- La segunda forma, es utilizar una "Incerción interna", la idea de la incercion interna es colocar el CSS dentro del mismo archivo HTML y no en un archivo aparte, esto lo hacemos colocando la etiqueta <style> dentro del <head> de nuestra página, esto genera que podamos modificar el estilo de nuestras etiquetas en nuestras páginas sin tener que acceder a otro archivo CSS, la ventaja es que tenes menos solicitudes de http, por lo cual, la pagina cargará más rápido, y es util por conveniencia para estilos específicos en una sola página, pero la desventaja es que si se utilizan muchos estilos para una página en particular, a la larga será difícil de mantener, y además el código para las páginas en particular de CSS no se puede reutilizar
+
+3- La tercera forma es utilizando "Estilos en línea", esto se logra colocando el atributo "style= "color: black;"(ejemplo, cualquier atributo a modificar)" dentro de la etiqueta que quieras modificar, la ventaja de esto es que el etilo no estará en el head de nuestro archivo, sino que estará directamente incrustado en nuestro contenido del documento, y también tiene como ventaja que es rápido y específico de aplicar a un elemento en particular, la desventaja es que al igual que con la incerción interna, el código no es reutilizable y es complicado de mantener con el tiempo, además de que los estilos en línea tiene una especificidad muy alta, por lo cual, puede ocasionar problemas si queremos modificar el estilo con un archivo CSS externo o interno, ya que el código tomará primero el estilo en línea.*/
+
+.indicacion{
+    color: rgba(255, 0, 0, 1); /*Acá estoy utilizando un selector de tipo "class", le asigne una clase a una etiqueta, entonces se le aplican los atributos a todos las etiquetas de dicha clase, en este caso, le apliqueé a un h3 una clase que se llama "Indicación", <h3 class="indicacion">*/
+}
+
+#iraca {
+    text-decoration: underline rgba(30, 144, 255, 1); /*Acá utilicé otro selector, es un selector de tipo "ID", este selector permite aplicarle a un elemento único (o sea, un elemento que tinee un ID), estilos, la diferencia entre el "class" y el "ID" es que el ID SIEMPRE será único, en cambio, pueden haber más de un elemento con la misma class */
+}
+
+.titulo-nada{
+    color: rgba(255, 0, 0, 1);
+    text-transform: uppercase;
+    font-size: 24px; /* Unidad absoluta */
+    font-family: "Emblema One", system-ui;
+}
+
+.parrafo-nada{
+    color: cornflowerblue;
+    font-style: normal;
+    font-size: 1.5em; /*unidad relativa al tamaño de la fuente del elemento padre, Rem es relativo al tamaño del elemento raíz*/
+    font-weight: 400;
+    font-family: "Emblema One", system-ui;
+}
+
+.caja{
+    display: block;
+    width: 50%;
+    height: 50vh; /*Por lo general, utilizamos unidades de medida como % y vh para el ancho y el alto de nuestras cajas, para que sean mas responsive, es considerado una buena práctica por eso mismo, solo utilizamos PX cuando necesitamos ESTRICTAMENTE que la caja se mantenga de cierto ancho*/
+    background-color: red; /*Aquí definimos el color de fondo del contenedor/caja */
+    border: 5px groove blue; /*Aquí modificamos el tamaño del borde de la caja que va acompañado de 3 caracteristicas, el grosor del borde, el tipo de borde, y el color del borde*/
+    /* padding: 100px; El padding modifica la distancia que hay entre el elemento que se encuentra dentro de la caja, y el borde de la caja*/
+    margin: 10px;
+    flex-grow: 1;/*flex-grow nos permite cambiar el ancho de las cajas de manera flexible segun nos convenga*/
+}
+
+.contenedor{
+    display: flex; /*Lo que hace display:flex es activar "flexbox", que es lo que nos sirve para posicionar los elementos en nuestra página web*/
+    justify-content: center; /*justify-content nos sirve para mover los elementos horizontalmente*/
+    align-items: center; /*Alinea los items de manera vertical*/
+    padding: 10px;
+    flex-direction: column-reverse; /*flex-direction nos permite asegurarnos el orden de las cajas, si las queremos en columnas o en filas, en este caso por ejemplo, estan en columnas per invertidas, en vez de ir de la 1 a la 3, van de la 3 a la 1 */
+}
+
+/*Menu de navegacion completo con html y css*/
+
+.mainnavbar{
+    background-color: rgb(235, 88, 248);
+}
+
+.mainnavbar ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Con esto nos aseguramos de arrancar nuestra barra de navegación con los atributos en 0*/
+}
+
+.mainnavbar ul li{
+    margin: 20px 15px;
+}
+
+.mainnavbar ul li a{
+    color: rgb(80, 216, 216);
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    width: 25%;
+    background-color: rgb(129, 212, 5);
+    padding: 20px;
+}
+
+.maincontent{
+    width: 75%;
+    background-color: rgb(185, 127, 0);
+    padding: 20px;
+}
+
+/*Media query*/
+@media (max-width: 576px) {
+    .clase-custom{
+        background-color: red;
+        color: red;
+    }
+}
+
+@media (min-width: 576px) {
+    .clase-custom {
+        background-color: green;
+        color: green;
+    }
+}

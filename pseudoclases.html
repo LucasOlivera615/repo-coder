@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Pseudoclases</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    /* Cambia el color al pasar el mouse */
+    a:hover {
+      color: blue;
+    }
+
+    /* Cambia el color mientras se hace clic */
+    a:active {
+      color: red;
+    }
+
+    /* Aplica borde cuando el input tiene foco */
+    input:focus {
+      outline: none;
+      border: 2px solid green;
+    }
+
+    ul li:first-child {
+      color: purple;
+      font-weight: bold;
+    }
+
+    ul li:last-child {
+      color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enlace con pseudoclases</h2>
+  <a href="#">¡Pasá el mouse o hacé clic aquí!</a>
+
+  <h2>Input con focus</h2>
+  <input type="text" placeholder="Escribí algo...">
+
+  <h2>Lista con pseudoclases</h2>
+  <ul>
+    <li>Primer ítem</li>
+    <li>Ítem del medio</li>
+    <li>Último ítem</li>
+  </ul>
+
+</body>
+</html>
