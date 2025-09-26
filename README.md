@@ -5,7 +5,7 @@ Mi proyecto con Coderhouse
 
 - 🔭 Actualmente estoy trabajando en **mejorar mi habilidad como desarrollador web**
 
-- 🌱 Actualmente estoy aprendiendo **HTML, CSS, GIT, GITHUB y BOOTSTRAP**
+- 🌱 Actualmente tengo conocimiento de  **HTML, CSS y Javascript**, y me encuentro aprendiendo **React JS**
 
 - 👯 Estoy buscando colaborar con **otros desarrolladores**
 
